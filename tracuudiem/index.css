@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: #2a33d4;
+  display: flex;
+  height: 115px;
+}
+.header .logo {
+  flex-basis: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.header .logo img {
+  width: 80px;
+  height: 80px;
+}
+.header .idea {
+  padding-left: 60px;
+  padding-top: 30px;
+}
+.header .idea .p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: yellow;
+}
+.header .idea #p1 {
+  font-size: 140%;
+}
+.header .idea #p2 {
+  font-size: 160%;
+  padding-top: 5px;
+}
+
+.main {
+  width: 980px;
+  background-color: rgb(243, 239, 239);
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding-top: 50px;
+}
+.main p {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main .p1 {
+  font-size: 110%;
+}
+.main .p2 {
+  font-size: 140%;
+  padding: 15px;
+}
+.main .pure-form {
+  padding-left: 200px;
+}
+.main .pure-form fieldset div {
+  display: flex;
+  padding-bottom: 20px;
+}
+.main .pure-form fieldset div b {
+  flex-basis: 200px;
+  justify-content: left;
+}
+.main .pure-form fieldset button {
+  margin-left: 200px;
+  margin-bottom: 40px;
+}
+
+.footer {
+  background-color: #2a33d4;
+  height: 50px;
+  margin-top: 20px;
+}
+.footer p {
+  padding-top: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 120%;
+}/*# sourceMappingURL=index.css.map */

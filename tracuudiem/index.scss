@@ -1,0 +1,88 @@
+$color-feature: #2a33d4;
+* {
+    padding: 0;
+    margin: 0;
+}
+.header {
+    background-color: $color-feature;
+    display: flex;
+    height: 115px;
+    .logo {
+        flex-basis: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    .idea {
+        padding-left: 60px;
+        padding-top: 30px;
+        .p {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: yellow;
+            
+        }
+        #p1 {
+            font-size: 140%;
+            }
+        #p2 {
+            font-size: 160%;
+            padding-top: 5px;
+        }
+    }
+}
+.main {
+    width: 980px;
+    background-color: rgb(243, 239, 239);
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding-top: 50px;
+    p {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+    .p1 {
+        font-size: 110%;
+    }
+    .p2 {
+        font-size: 140%;
+        padding: 15px;
+    }
+    .pure-form {
+        padding-left: 200px;
+        fieldset {
+            div {
+                display: flex;
+                padding-bottom: 20px;
+                b {
+                    flex-basis: 200px;
+                    justify-content: left;
+                }
+            }
+            button {
+                margin-left: 200px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+.footer {
+    background-color: $color-feature;
+    height: 50px;
+    margin-top: 20px;
+    p {
+        padding-top: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        font-size: 120%;
+    }
+}
