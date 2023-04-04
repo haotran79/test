@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Nạp các file CSS của Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+		.my-bg {
+			background-color: #f3d96f;
+		}
+	</style>
+</head>
+
+<body class="my-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-4 p-5 rounded p5 bg-white">
+                <h2 class="text-center">New Book</h2>
+                <form th:object="${book}" th:action="@{/book/save/{bookcode}(bookcode=${book.bookcode})}" th:method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Title</label>&#160;
+                        <span style="color: red">&#160;(*)</span>
+                        <span th:if="${NullTitle == 'true'}" style="color:red">Title can not be null!</span>
+                        <input class="form-control" type="text" name="title" th:value="${book.title}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Author</label>&#160;
+                        <span style="color: red">&#160;(*)</span>
+                        <span th:if="${NullAuthor == 'true'}" style="color:red">Author can not be null</span>
+                        <input class="form-control" type="text" name="author" th:value="${book.author}">
+                    </div>
+                    <div th:if="${error == 'true'}">
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            <div>
+                            	<i class="fa-solid fa-triangle-exclamation"></i>
+                                This Book is already exist!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>&#160;
+                        <span th:if="${Nullcategory == 'true'}" style="color:red">Category can not be null!</span>
+                        <input class="form-control" type="text" name="category" th:value="${book.category}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Approved &#160;</label>
+                        <input type="checkbox" name="approved" th:checked="${book.approved}">
+                    </div>
+                    <input type="submit" value="Add Book" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Nạp các file JavaScript của Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
